@@ -1,0 +1,5 @@
+FROM centos
+WORKDIR /mydir
+ADD App /mydir/Newapp
+EXPOSE 8080 
+ENTRYPOINT [ "centos","Newapp"]
