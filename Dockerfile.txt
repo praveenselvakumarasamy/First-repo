@@ -1,5 +1,5 @@
-FROM httpd
-WORKDIR /
-RUN sudo yum update -y
-ADD App /index
-ENTRYPOINT [ "index"]
+FROM centos
+RUN yum install httpd -y
+COPY index.html /var/www/html
+EXPOSE 80
+CMD apachectl -D FOREGROUND
